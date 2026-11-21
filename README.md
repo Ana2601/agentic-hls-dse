@@ -8,6 +8,8 @@ directives for a GEMM kernel and recovers the Pareto-optimal front of
 Apple Silicon — so it is a portable, always-runnable demonstration of agentic
 hardware design.
 
+![Architecture](docs/diagrams/architecture.svg)
+
 ## What the agent does
 
 1. **Proposes** `(UF, PF)` directive pairs — unroll factor and array
@@ -55,6 +57,12 @@ python3 dse.py --propose-llm   # LLM-seeded search (needs NVIDIA_API_KEY)
 The agent finds the same front as the brute-force oracle — a tractable
 stand-in for the full `vitis_hls` flow, which this pattern drives remotely on
 an FPGA host.
+
+## Test run
+
+Output of the CI command (`python3 test_dse.py`), captured from a local run:
+
+![Test run](docs/screenshots/test_run.svg)
 
 ## Setup
 
